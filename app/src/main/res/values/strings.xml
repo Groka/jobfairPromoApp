@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JobfairPromo</string>
+    <string name="ime_i_prezime">Ime i prezime</string>
+    <string name="email">Email</string>
+    <string name="telefon">Telefon</string>
+    <string name="prijavi_se">Prijavi se !</string>
+</resources>
