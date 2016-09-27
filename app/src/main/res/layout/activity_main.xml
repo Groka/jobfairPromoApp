@@ -9,76 +9,145 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:gravity="center_horizontal"
+    android:background="@drawable/background"
     tools:context="com.jf.jobfairpromo.MainActivity">
 
-    <TextView
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvImePrezime"
-        android:text="@string/ime_i_prezime"
-        android:textAlignment="center"
-        android:layout_marginTop="@dimen/margin"
-        android:layout_alignStart="@+id/etImePrezime"
-        android:layout_alignLeft="@+id/etImePrezime"/>
 
-    <EditText
-        android:textAlignment="center"
-        android:layout_width="@dimen/textWidth"
+    <LinearLayout
+        android:id="@+id/jflogo"
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etImePrezime"
-        android:layout_below="@id/tvImePrezime"
-        android:inputType="textPersonName"
-        />
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="60dp"
+            android:background="@drawable/jflogo"
+            />
+    </LinearLayout>
 
     <TextView
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvEmail"
-        android:text="@string/email"
+        android:layout_marginTop="50dp"
         android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:layout_below="@id/jflogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/jfSlogan"
+        android:id="@+id/jfSlogan" />
+
+    <!-- IME I PREZIME -->
+
+    <LinearLayout
+        android:id="@+id/imeiprezime"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/jfSlogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:background="@drawable/user"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <EditText
+            android:id="@+id/etImePrezime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/background_light"
+            android:hint="@string/ime_i_prezime"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:inputType="textPersonName"/>
+
+    </LinearLayout>
+
+    <!-- EMAIL -->
+
+    <LinearLayout
+        android:id="@+id/email"
         android:layout_marginTop="@dimen/margin"
-        android:layout_below="@id/etImePrezime"
-        android:layout_alignStart="@+id/etImePrezime"
-        android:layout_alignLeft="@+id/etImePrezime"
-        />
-
-    <EditText
-        android:textAlignment="center"
-        android:layout_width="@dimen/textWidth"
+        android:layout_below="@id/imeiprezime"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etEmail"
-        android:layout_below="@id/tvEmail"
-        android:inputType="textEmailAddress"
-        />
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvTelefon"
-        android:text="@string/telefon"
-        android:textAlignment="center"
+        <ImageView
+            android:background="@drawable/email"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/background_light"
+            android:hint="@string/email"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:inputType="textEmailAddress"/>
+
+    </LinearLayout>
+
+    <!-- TELEFON -->
+
+    <LinearLayout
+        android:id="@+id/telefon"
         android:layout_marginTop="@dimen/margin"
-        android:layout_alignStart="@+id/etImePrezime"
-        android:layout_alignLeft="@+id/etImePrezime"
-        android:layout_below="@id/etEmail"
-        />
-
-    <EditText
-        android:inputType="phone"
-        android:textAlignment="center"
-        android:layout_width="@dimen/textWidth"
+        android:layout_below="@id/email"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etTelefon"
-        android:layout_below="@id/tvTelefon"
-        />
+        android:orientation="horizontal">
+
+        <ImageView
+            android:background="@drawable/phone"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <EditText
+            android:id="@+id/etTelefon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/background_light"
+            android:hint="@string/telefon"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:inputType="phone"/>
+
+    </LinearLayout>
 
     <Button
+        android:layout_centerHorizontal="true"
         android:id="@+id/button"
-        android:layout_width="@dimen/textWidth"
-        android:layout_height="70dp"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
         android:text="@string/prijavi_se"
-        android:layout_below="@id/etTelefon"
+        android:layout_below="@id/telefon"
         android:layout_marginTop="@dimen/margin"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:textAllCaps="true"
+        android:background="#363738"
          />
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/powered_by_eestec_lc_sarajevo"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="10sp"
+        android:layout_marginBottom="15dp"/>
+
 
 </RelativeLayout>
